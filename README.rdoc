@@ -1,0 +1,54 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
+
+* change gem spring
+bundle
+bundle update
+
+* Start a web server in host machine 
+bin/rails server -b 0.0.0.0
+
+* Running without `bundle exec` may run the wrong version of ruby 
+* or it may use the correct version of ruby but with incorrect gem versions. 
+* e.g. bundle exec ruby exercises/exercise_1.rb
+
+* create the first model
+bin/rails generate model Article title:string text:text
+
+* 1. create a second model
+bin/rails generate model Comment commenter:string body:text article:references
+
+* 2. to run migration
+bin/rake db:migrate
+
+* 3. generate a controller
+bin/rails generate controller Comments
+
+* to check clean routes
+bin/rake routes | grep articles
